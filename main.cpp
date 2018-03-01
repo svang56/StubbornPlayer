@@ -8,13 +8,12 @@ int main()
   SecretDoor game;
   int userinput = 0;
   int GameWonNum = 0;
-  int gamestartnum = 0;
 
   cout<<"How many times do you want to play Door Prize?\n";
   cin>>userinput;
  
-    while(gamestartnum <= userinput)
-    {
+   for(int gamestartnum = 0; gamestartnum < userinput; gamestartnum++)
+   {
         game.newGame();
         game.guessDoorC();
         game.guessDoorC();
@@ -22,7 +21,6 @@ int main()
         {
             GameWonNum++;
         }
-        gamestartnum++;
 
     }
     cout<<"You won "<<GameWonNum<<" games."<<endl;
